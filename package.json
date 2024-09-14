@@ -1,0 +1,27 @@
+{
+  "name": "electron-web-print",
+  "version": "1.0.0",
+  "description": "electron web print",
+  "main": "index.js",
+  "scripts": {
+    "demo": "electron ./demo/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "electron": "^31.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyhahaha/electron-web-print.git"
+  },
+  "keywords": [
+    "electron",
+    "print"
+  ],
+  "author": "zyhahaha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zyhahaha/electron-web-print/issues"
+  },
+  "homepage": "https://github.com/zyhahaha/electron-web-print#readme"
+}

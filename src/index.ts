@@ -14,7 +14,7 @@ export function webPrint(printHtml, options) {
     });
 
     mainWindow.on('closed', () => {
-        mainWindow = null;
+        mainWindow = null as any;
     });
 
     mainWindow.loadFile(options.pathTemplate || join(__dirname, "renderer/index.html"));

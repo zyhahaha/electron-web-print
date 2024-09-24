@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Electron Pos Printer Demo</title>
+    <title>Electron Print Demo</title>
     <style>
         body {
             height: 100%;
@@ -26,7 +26,7 @@
     </style>
 </head>
 <body>
-<h1 class="title">Elecron Pos Printer Demo</h1>
+<h1 class="title">Elecron Print Demo</h1>
 <button class="btn" onclick="sendTestPrint()">Print Test page</button>
 
 <script>
@@ -35,8 +35,6 @@
     function sendTestPrint() {
         ipcRenderer.send('test-print', {});
     }
-
-
 </script>
 </body>
 </html>

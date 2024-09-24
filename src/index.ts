@@ -1,4 +1,4 @@
-import { BrowserWindow } from 'electron';
+import { BrowserWindow, ipcMain } from 'electron';
 import { join } from "path";
 
 export function webPrint(printHtml, options) {
@@ -21,5 +21,33 @@ export function webPrint(printHtml, options) {
 
     mainWindow.webContents.on('did-finish-load', async () => {
         mainWindow.webContents.send('render-html', printHtml)
+        ipcMain.once('render-html-reply', () => {
+            console.log('options', options)
+            if (!options.preview) {
+                mainWindow.webContents.print({
+                    silent: !!options.silent,
+                    printBackground: !!options.printBackground,
+                    deviceName: options.printerName,
+                    copies: options?.copies || 1,
+                    pageSize: { width: options.width, height: options.height },
+                    ...(options.header && { color: options.header }),
+                    ...(options.footer && { color: options.footer }),
+                    ...(options.color && { color: options.color }),
+                    ...(options.printBackground && { printBackground: options.printBackground }),
+                    ...(options.margins && { margins: options.margins }),
+                    ...(options.landscape && { landscape: options.landscape }),
+                    ...(options.scaleFactor && { scaleFactor: options.scaleFactor }),
+                    ...(options.pagesPerSheet && { pagesPerSheet: options.pagesPerSheet }),
+                    ...(options.collate && { collate: options.collate }),
+                    ...(options.pageRanges && { pageRanges: options.pageRanges }),
+                    ...(options.duplexMode && { duplexMode: options.duplexMode }),
+                    ...(options.dpi && { dpi: options.dpi }),
+                }, (arg, err) => {
+                    console.log('arg---------->>', arg);
+                    console.log('err---------->>', err);
+                    mainWindow.close();
+                })
+            }
+        });
     });
 }

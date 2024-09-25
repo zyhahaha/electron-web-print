@@ -30,14 +30,17 @@ function testPrint() {
     const options = {
         silent: true, // 静默打印
         preview: false,
-        width: 500,
-        height: 500,
+        printBackground: true,
+        width: 200,
+        height: 700,
         copies: 1,
-        printerName: 'XP-58-001',
+        printerName: 'XP-80C', // XP-80C、HPRT N41
         timeOutPerLine: 400,
     }
 
-    const htmlData = `<h2>Hello World 111</h2>`;
+    const htmlData = `<div>
+        <h2>Hello World 111</h2>
+    </div>`;
 
     try {
         webPrint(htmlData, options)

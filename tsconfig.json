@@ -17,6 +17,9 @@
   },
   "exclude": [
     "./node_modules",
-    "src/renderer"
+    "src/renderer",
+    "./dist",
+    "./demo",
+    "./webpack.config.js"
   ]
 }

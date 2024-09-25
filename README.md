@@ -3,8 +3,8 @@ It currently supports versions of electron >= 6.x.x
 
 ### Installation
 ```bash
-$ npm install electron-pos-printer
-$ yarn add electron-pos-printer
+$ npm install electron-web-print
+$ yarn add electron-web-print
 ```
 
 ### Example code

@@ -38,7 +38,7 @@ function testPrint() {
         timeOutPerLine: 400,
     }
 
-    const htmlData = `<div>
+    const htmlData = `<div style="font-size: 5px;">
         <h2>Hello World 111</h2>
     </div>`;
 

@@ -38,8 +38,12 @@ function testPrint() {
         timeOutPerLine: 400,
     }
 
-    const htmlData = `<div style="font-size: 5px;">
-        <h2>Hello World 111</h2>
+    const htmlData = `<div style="width: 100%; font-size: 12px; word-break: break-all;">
+        <h2>title</h2>
+        <h5>subtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitle</h5>
+        <p>zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</p>
+        <p>总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你</p>
+        <p>总问你总问你</p>
     </div>`;
 
     try {

@@ -1,3 +1,4 @@
+import './index.css';
 const ipcRender = require('electron').ipcRenderer;
 
 ipcRender.on('render-html', (event, printHtml: string) => {

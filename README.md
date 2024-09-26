@@ -11,15 +11,9 @@ $ yarn add electron-web-print
 ```typescript
 import { webPrint } from "electron-web-print";
 
+// options详细参数见：https://www.electronjs.org/docs/latest/api/web-contents#contentsprintoptions-callback
 const options = {
-    silent: true, // 静默打印
-    preview: false,
-    printBackground: true,
-    width: 200,
-    height: 700,
-    copies: 1,
     printerName: 'XP-80C', // XP-80C、HPRT N41
-    timeOutPerLine: 400,
 }
 
 const htmlData = `<div style="width: 100%; font-size: 12px; word-break: break-all;">

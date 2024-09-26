@@ -1,0 +1,13 @@
+.title {
+    font-size: 24px;
+}
+
+.btn {
+    font-size: 16px;
+    background-color: #3caf50;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 4px;
+    margin: 10px 0;
+    border: none;
+}

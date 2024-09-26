@@ -27,7 +27,7 @@ export function webPrint(printHtml, options) {
                 mainWindow.webContents.print({
                     silent: !!options.silent,
                     printBackground: !!options.printBackground,
-                    deviceName: options.printerName,
+                    deviceName: options.printerName || options.deviceName,
                     copies: options?.copies || 1,
                     // pageSize: { width: options.width * 1000, height: options.height * 1000 },
                     ...(options.header && { color: options.header }),

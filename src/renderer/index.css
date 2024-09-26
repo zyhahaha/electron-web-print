@@ -1,0 +1,9 @@
+@page {
+    margin: 0;
+    page-break-before: always;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}

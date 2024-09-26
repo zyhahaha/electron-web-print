@@ -1,10 +1,9 @@
 const { app, BrowserWindow, ipcMain, screen } = require('electron');
-const path = require("path");
 const { webPrint } = require("../dist/index");
 
 const createWindow = () => {
     const size = screen.getPrimaryDisplay().size;
-    console.log(size);
+    // console.log(size);
     const win = new BrowserWindow({
         width: 800,
         height: 600,
@@ -28,14 +27,7 @@ ipcMain.on('test-print', testPrint);
 
 function testPrint() {
     const options = {
-        silent: true, // 静默打印
-        preview: false,
-        printBackground: true,
-        width: 200,
-        height: 700,
-        copies: 1,
-        printerName: 'XP-80C', // XP-80C、HPRT N41
-        timeOutPerLine: 400,
+        printerName: 'HPRT N41', // XP-80C、HPRT N41
     }
 
     const htmlData = `<div style="width: 100%; font-size: 12px; word-break: break-all;">
@@ -49,7 +41,6 @@ function testPrint() {
     try {
         webPrint(htmlData, options)
     } catch (e) {
-        console.log(webPrint)
         console.log(e);
     }
 }

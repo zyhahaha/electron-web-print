@@ -3,8 +3,8 @@ import { join } from "path";
 
 export function webPrint(printHtml, options) {
     let mainWindow = new BrowserWindow({
-        width: options.width * 4,
-        height: options.height * 4,
+        width: Math.round(options.width * 4),
+        height: Math.round(options.height * 4),
         show: !!options.preview,
         webPreferences: {
             nodeIntegration: true,

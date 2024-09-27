@@ -3,9 +3,8 @@ import { join } from "path";
 
 export function webPrint(printHtml, options) {
     let mainWindow = new BrowserWindow({
-        width: options.width,
-        height: options.height,
-        // ...parsePaperSize(options.pageSize),
+        width: options.width * 4,
+        height: options.height * 4,
         show: !!options.preview,
         webPreferences: {
             nodeIntegration: true,
@@ -29,7 +28,7 @@ export function webPrint(printHtml, options) {
                     printBackground: !!options.printBackground,
                     deviceName: options.printerName || options.deviceName,
                     copies: options?.copies || 1,
-                    // pageSize: { width: options.width * 1000, height: options.height * 1000 },
+                    pageSize: { width: options.width * 1000, height: options.height * 1000 },
                     ...(options.header && { color: options.header }),
                     ...(options.footer && { color: options.footer }),
                     ...(options.color && { color: options.color }),

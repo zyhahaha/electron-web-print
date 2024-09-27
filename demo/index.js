@@ -35,14 +35,14 @@ function testPrint() {
         printerName: 'HPRT N41', // XP-58 (副本 1)、HPRT N41
     }
 
-    // const htmlData = `<div style="width: 100%; font-size: 12px; word-break: break-all;">
-    //     <h2>title</h2>
-    //     <h5>subtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitleend</h5>
-    //     <p>zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</p>
-    //     <p>总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你end</p>
-    //     <p>总问你总问你</p>
-    // </div>`;
-    const htmlData = `<section id="main" style="width: 100%; margin: 0px auto;">
+    const htmlData = `<div style="width: 100%; font-size: 12px; word-break: break-all;">
+        <h2>title</h2>
+        <h5>subtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitlesubtitleend</h5>
+        <p>zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</p>
+        <p>总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你总问你end</p>
+        <p>总问你总问你</p>
+    </div>`;
+    const htmlDataBig = `<section id="main" style="width: 100%; margin: 0px auto;">
         <div style="font-weight: bold; font-size: 26px; letter-spacing: 2px; text-align: center;">顾客联</div>
         <div style="float: right; margin-top: -37px; margin-right: -10px;"><svg id="barCode-1" width="77px"
                 height="64px" x="0px" y="0px" viewBox="0 0 77 64" xmlns="http://www.w3.org/2000/svg" version="1.1"
